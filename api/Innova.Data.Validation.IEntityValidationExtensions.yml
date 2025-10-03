@@ -1,0 +1,199 @@
+### YamlMime:ManagedReference
+items:
+- uid: Innova.Data.Validation.IEntityValidationExtensions
+  commentId: T:Innova.Data.Validation.IEntityValidationExtensions
+  id: IEntityValidationExtensions
+  parent: Innova.Data.Validation
+  children:
+  - Innova.Data.Validation.IEntityValidationExtensions.SetEntityValidationResult``1(Innova.Data.Validation.IEntityValidation,``0,System.String)
+  langs:
+  - csharp
+  - vb
+  name: IEntityValidationExtensions
+  nameWithType: IEntityValidationExtensions
+  fullName: Innova.Data.Validation.IEntityValidationExtensions
+  type: Class
+  source:
+    id: IEntityValidationExtensions
+    path: C:\Source\Workspaces\Workspace\Innova Frameworks\IDP\src\Innova.Data\Validation\IEntityValidationExtensions.cs
+    startLine: 5
+  assemblies:
+  - Innova.Data
+  namespace: Innova.Data.Validation
+  syntax:
+    content: public static class IEntityValidationExtensions
+    content.vb: Public Module IEntityValidationExtensions
+  inheritance:
+  - System.Object
+- uid: Innova.Data.Validation.IEntityValidationExtensions.SetEntityValidationResult``1(Innova.Data.Validation.IEntityValidation,``0,System.String)
+  commentId: M:Innova.Data.Validation.IEntityValidationExtensions.SetEntityValidationResult``1(Innova.Data.Validation.IEntityValidation,``0,System.String)
+  id: SetEntityValidationResult``1(Innova.Data.Validation.IEntityValidation,``0,System.String)
+  isExtensionMethod: true
+  parent: Innova.Data.Validation.IEntityValidationExtensions
+  langs:
+  - csharp
+  - vb
+  name: SetEntityValidationResult<T>(IEntityValidation, T, string)
+  nameWithType: IEntityValidationExtensions.SetEntityValidationResult<T>(IEntityValidation, T, string)
+  fullName: Innova.Data.Validation.IEntityValidationExtensions.SetEntityValidationResult<T>(Innova.Data.Validation.IEntityValidation, T, string)
+  type: Method
+  source:
+    id: SetEntityValidationResult
+    path: C:\Source\Workspaces\Workspace\Innova Frameworks\IDP\src\Innova.Data\Validation\IEntityValidationExtensions.cs
+    startLine: 15
+  assemblies:
+  - Innova.Data
+  namespace: Innova.Data.Validation
+  summary: Sets the validation result for the specified entity.
+  example: []
+  syntax:
+    content: 'public static Task SetEntityValidationResult<T>(this IEntityValidation entityValidation, T entity, string propertyName = "") where T : class'
+    parameters:
+    - id: entityValidation
+      type: Innova.Data.Validation.IEntityValidation
+      description: The entity validation instance.
+    - id: entity
+      type: '{T}'
+      description: The entity to validate.
+    - id: propertyName
+      type: System.String
+      description: The name of the property to validate. If empty, validates the entire entity.
+    typeParameters:
+    - id: T
+      description: The type of the entity.
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Public Shared Function SetEntityValidationResult(Of T As Class)(entityValidation As IEntityValidation, entity As T, propertyName As String = "") As Task
+  overload: Innova.Data.Validation.IEntityValidationExtensions.SetEntityValidationResult*
+  nameWithType.vb: IEntityValidationExtensions.SetEntityValidationResult(Of T)(IEntityValidation, T, String)
+  fullName.vb: Innova.Data.Validation.IEntityValidationExtensions.SetEntityValidationResult(Of T)(Innova.Data.Validation.IEntityValidation, T, String)
+  name.vb: SetEntityValidationResult(Of T)(IEntityValidation, T, String)
+references:
+- uid: Innova.Data.Validation
+  commentId: N:Innova.Data.Validation
+  href: Innova.html
+  name: Innova.Data.Validation
+  nameWithType: Innova.Data.Validation
+  fullName: Innova.Data.Validation
+  spec.csharp:
+  - uid: Innova
+    name: Innova
+    href: Innova.html
+  - name: .
+  - uid: Innova.Data
+    name: Data
+    href: Innova.Data.html
+  - name: .
+  - uid: Innova.Data.Validation
+    name: Validation
+    href: Innova.Data.Validation.html
+  spec.vb:
+  - uid: Innova
+    name: Innova
+    href: Innova.html
+  - name: .
+  - uid: Innova.Data
+    name: Data
+    href: Innova.Data.html
+  - name: .
+  - uid: Innova.Data.Validation
+    name: Validation
+    href: Innova.Data.Validation.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Innova.Data.Validation.IEntityValidationExtensions.SetEntityValidationResult*
+  commentId: Overload:Innova.Data.Validation.IEntityValidationExtensions.SetEntityValidationResult
+  href: Innova.Data.Validation.IEntityValidationExtensions.SetEntityValidationResult.html#Innova_Data_Validation_IEntityValidationExtensions_SetEntityValidationResult__1_Innova_Data_Validation_IEntityValidation___0_System_String_
+  name: SetEntityValidationResult
+  nameWithType: IEntityValidationExtensions.SetEntityValidationResult
+  fullName: Innova.Data.Validation.IEntityValidationExtensions.SetEntityValidationResult
+- uid: Innova.Data.Validation.IEntityValidation
+  commentId: T:Innova.Data.Validation.IEntityValidation
+  parent: Innova.Data.Validation
+  href: Innova.Data.Validation.IEntityValidation.html
+  name: IEntityValidation
+  nameWithType: IEntityValidation
+  fullName: Innova.Data.Validation.IEntityValidation
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+memberLayout: SeparatePages

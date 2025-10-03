@@ -1,0 +1,288 @@
+### YamlMime:ManagedReference
+items:
+- uid: Innova.Data.Validation.BaseLanguageManager
+  commentId: T:Innova.Data.Validation.BaseLanguageManager
+  id: BaseLanguageManager
+  parent: Innova.Data.Validation
+  children:
+  - Innova.Data.Validation.BaseLanguageManager.#ctor
+  langs:
+  - csharp
+  - vb
+  name: BaseLanguageManager
+  nameWithType: BaseLanguageManager
+  fullName: Innova.Data.Validation.BaseLanguageManager
+  type: Class
+  source:
+    id: BaseLanguageManager
+    path: C:\Source\Workspaces\Workspace\Innova Frameworks\IDP\src\Innova.Data\Validation\BaseLanguageManager.cs
+    startLine: 12
+  assemblies:
+  - Innova.Data
+  namespace: Innova.Data.Validation
+  summary: Represents a base language manager for handling validation translations.
+  example: []
+  syntax:
+    content: 'public class BaseLanguageManager : LanguageManager, ILanguageManager'
+    content.vb: Public Class BaseLanguageManager Inherits LanguageManager Implements ILanguageManager
+  inheritance:
+  - System.Object
+  - FluentValidation.Resources.LanguageManager
+  implements:
+  - FluentValidation.Resources.ILanguageManager
+  inheritedMembers:
+  - FluentValidation.Resources.LanguageManager.Clear
+  - FluentValidation.Resources.LanguageManager.GetString(System.String,System.Globalization.CultureInfo)
+  - FluentValidation.Resources.LanguageManager.AddTranslation(System.String,System.String,System.String)
+  - FluentValidation.Resources.LanguageManager.Enabled
+  - FluentValidation.Resources.LanguageManager.Culture
+- uid: Innova.Data.Validation.BaseLanguageManager.#ctor
+  commentId: M:Innova.Data.Validation.BaseLanguageManager.#ctor
+  id: '#ctor'
+  parent: Innova.Data.Validation.BaseLanguageManager
+  langs:
+  - csharp
+  - vb
+  name: BaseLanguageManager()
+  nameWithType: BaseLanguageManager.BaseLanguageManager()
+  fullName: Innova.Data.Validation.BaseLanguageManager.BaseLanguageManager()
+  type: Constructor
+  source:
+    id: .ctor
+    path: C:\Source\Workspaces\Workspace\Innova Frameworks\IDP\src\Innova.Data\Validation\BaseLanguageManager.cs
+    startLine: 15
+  assemblies:
+  - Innova.Data
+  namespace: Innova.Data.Validation
+  syntax:
+    content: public BaseLanguageManager()
+    content.vb: Public Sub New()
+  overload: Innova.Data.Validation.BaseLanguageManager.#ctor*
+  nameWithType.vb: BaseLanguageManager.New()
+  fullName.vb: Innova.Data.Validation.BaseLanguageManager.New()
+  name.vb: New()
+references:
+- uid: Innova.Data.Validation
+  commentId: N:Innova.Data.Validation
+  href: Innova.html
+  name: Innova.Data.Validation
+  nameWithType: Innova.Data.Validation
+  fullName: Innova.Data.Validation
+  spec.csharp:
+  - uid: Innova
+    name: Innova
+    href: Innova.html
+  - name: .
+  - uid: Innova.Data
+    name: Data
+    href: Innova.Data.html
+  - name: .
+  - uid: Innova.Data.Validation
+    name: Validation
+    href: Innova.Data.Validation.html
+  spec.vb:
+  - uid: Innova
+    name: Innova
+    href: Innova.html
+  - name: .
+  - uid: Innova.Data
+    name: Data
+    href: Innova.Data.html
+  - name: .
+  - uid: Innova.Data.Validation
+    name: Validation
+    href: Innova.Data.Validation.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: FluentValidation.Resources.LanguageManager
+  commentId: T:FluentValidation.Resources.LanguageManager
+  parent: FluentValidation.Resources
+  isExternal: true
+  name: LanguageManager
+  nameWithType: LanguageManager
+  fullName: FluentValidation.Resources.LanguageManager
+- uid: FluentValidation.Resources.ILanguageManager
+  commentId: T:FluentValidation.Resources.ILanguageManager
+  parent: FluentValidation.Resources
+  isExternal: true
+  name: ILanguageManager
+  nameWithType: ILanguageManager
+  fullName: FluentValidation.Resources.ILanguageManager
+- uid: FluentValidation.Resources.LanguageManager.Clear
+  commentId: M:FluentValidation.Resources.LanguageManager.Clear
+  parent: FluentValidation.Resources.LanguageManager
+  isExternal: true
+  name: Clear()
+  nameWithType: LanguageManager.Clear()
+  fullName: FluentValidation.Resources.LanguageManager.Clear()
+  spec.csharp:
+  - uid: FluentValidation.Resources.LanguageManager.Clear
+    name: Clear
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.Resources.LanguageManager.Clear
+    name: Clear
+    isExternal: true
+  - name: (
+  - name: )
+- uid: FluentValidation.Resources.LanguageManager.GetString(System.String,System.Globalization.CultureInfo)
+  commentId: M:FluentValidation.Resources.LanguageManager.GetString(System.String,System.Globalization.CultureInfo)
+  parent: FluentValidation.Resources.LanguageManager
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: GetString(string, CultureInfo)
+  nameWithType: LanguageManager.GetString(string, CultureInfo)
+  fullName: FluentValidation.Resources.LanguageManager.GetString(string, System.Globalization.CultureInfo)
+  nameWithType.vb: LanguageManager.GetString(String, CultureInfo)
+  fullName.vb: FluentValidation.Resources.LanguageManager.GetString(String, System.Globalization.CultureInfo)
+  name.vb: GetString(String, CultureInfo)
+  spec.csharp:
+  - uid: FluentValidation.Resources.LanguageManager.GetString(System.String,System.Globalization.CultureInfo)
+    name: GetString
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Globalization.CultureInfo
+    name: CultureInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.Resources.LanguageManager.GetString(System.String,System.Globalization.CultureInfo)
+    name: GetString
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Globalization.CultureInfo
+    name: CultureInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo
+  - name: )
+- uid: FluentValidation.Resources.LanguageManager.AddTranslation(System.String,System.String,System.String)
+  commentId: M:FluentValidation.Resources.LanguageManager.AddTranslation(System.String,System.String,System.String)
+  parent: FluentValidation.Resources.LanguageManager
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: AddTranslation(string, string, string)
+  nameWithType: LanguageManager.AddTranslation(string, string, string)
+  fullName: FluentValidation.Resources.LanguageManager.AddTranslation(string, string, string)
+  nameWithType.vb: LanguageManager.AddTranslation(String, String, String)
+  fullName.vb: FluentValidation.Resources.LanguageManager.AddTranslation(String, String, String)
+  name.vb: AddTranslation(String, String, String)
+  spec.csharp:
+  - uid: FluentValidation.Resources.LanguageManager.AddTranslation(System.String,System.String,System.String)
+    name: AddTranslation
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.Resources.LanguageManager.AddTranslation(System.String,System.String,System.String)
+    name: AddTranslation
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: FluentValidation.Resources.LanguageManager.Enabled
+  commentId: P:FluentValidation.Resources.LanguageManager.Enabled
+  parent: FluentValidation.Resources.LanguageManager
+  isExternal: true
+  name: Enabled
+  nameWithType: LanguageManager.Enabled
+  fullName: FluentValidation.Resources.LanguageManager.Enabled
+- uid: FluentValidation.Resources.LanguageManager.Culture
+  commentId: P:FluentValidation.Resources.LanguageManager.Culture
+  parent: FluentValidation.Resources.LanguageManager
+  isExternal: true
+  name: Culture
+  nameWithType: LanguageManager.Culture
+  fullName: FluentValidation.Resources.LanguageManager.Culture
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: FluentValidation.Resources
+  commentId: N:FluentValidation.Resources
+  isExternal: true
+  name: FluentValidation.Resources
+  nameWithType: FluentValidation.Resources
+  fullName: FluentValidation.Resources
+  spec.csharp:
+  - uid: FluentValidation
+    name: FluentValidation
+    isExternal: true
+  - name: .
+  - uid: FluentValidation.Resources
+    name: Resources
+    isExternal: true
+  spec.vb:
+  - uid: FluentValidation
+    name: FluentValidation
+    isExternal: true
+  - name: .
+  - uid: FluentValidation.Resources
+    name: Resources
+    isExternal: true
+- uid: Innova.Data.Validation.BaseLanguageManager.#ctor*
+  commentId: Overload:Innova.Data.Validation.BaseLanguageManager.#ctor
+  href: Innova.Data.Validation.BaseLanguageManager.-ctor.html#Innova_Data_Validation_BaseLanguageManager__ctor
+  name: BaseLanguageManager
+  nameWithType: BaseLanguageManager.BaseLanguageManager
+  fullName: Innova.Data.Validation.BaseLanguageManager.BaseLanguageManager
+  nameWithType.vb: BaseLanguageManager.New
+  fullName.vb: Innova.Data.Validation.BaseLanguageManager.New
+  name.vb: New
+memberLayout: SeparatePages
