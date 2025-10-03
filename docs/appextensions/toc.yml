@@ -1,8 +1,0 @@
-- name : Introduction
-  href : index.md
-- name : Implemention
-  href : implement.md
-- name : Log Extension
-  href : log/index.md
-- name : Security Extension
-  href : security/toc.yml

@@ -1,4 +1,0 @@
-- name: Add user to roles 
-  href: addusertoroles.md
-- name: Customize ApplicationSecurity 
-  href: customizesecuritysetting.md
