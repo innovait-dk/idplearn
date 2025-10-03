@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class CustomLogger |  Learn Innova Developer Platform </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class CustomLogger |  Learn Innova Developer Platform ">
+      
+      <meta name="description" content="Represents a custom logger that implements the  interface.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Learn Innova Developer Platform">
+            Learn Innova Developer Platform
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Innova.Data.Logging.CustomLogger">
+
+
+
+  <h1 id="Innova_Data_Logging_CustomLogger" data-uid="Innova.Data.Logging.CustomLogger" class="text-break">
+Class CustomLogger  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Innova.html">Innova</a>.<a class="xref" href="Innova.Data.html">Data</a>.<a class="xref" href="Innova.Data.Logging.html">Logging</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Innova.Data.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a custom logger that implements the <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a> interface.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class CustomLogger : ILogger</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><span class="xref">object</span></div>
+      <div><span class="xref">CustomLogger</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Innova.Data.Logging.ILoggerExtensions.LogAction.html#Innova_Data_Logging_ILoggerExtensions_LogAction_Microsoft_Extensions_Logging_ILogger_Microsoft_Extensions_Logging_EventId_System_String_System_String_">ILoggerExtensions.LogAction(ILogger, EventId, string, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="Innova.Data.Logging.ILoggerExtensions.LogDataDeleted.html#Innova_Data_Logging_ILoggerExtensions_LogDataDeleted__1_Microsoft_Extensions_Logging_ILogger_Innova_Data_Entity_PrimaryKeys___0__">ILoggerExtensions.LogDataDeleted&lt;T&gt;(ILogger, PrimaryKeys&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Innova.Data.Logging.ILoggerExtensions.LogDataDeleted.html#Innova_Data_Logging_ILoggerExtensions_LogDataDeleted__1_Microsoft_Extensions_Logging_ILogger_System_Collections_Generic_IEnumerable_Innova_Data_Entity_PrimaryKeys___0___">ILoggerExtensions.LogDataDeleted&lt;T&gt;(ILogger, IEnumerable&lt;PrimaryKeys&lt;T&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Innova.Data.Logging.ILoggerExtensions.LogDataInserted.html#Innova_Data_Logging_ILoggerExtensions_LogDataInserted__1_Microsoft_Extensions_Logging_ILogger_Innova_Data_Entity_PrimaryKeys___0__">ILoggerExtensions.LogDataInserted&lt;T&gt;(ILogger, PrimaryKeys&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Innova.Data.Logging.ILoggerExtensions.LogDataUpdated.html#Innova_Data_Logging_ILoggerExtensions_LogDataUpdated__1_Microsoft_Extensions_Logging_ILogger_Innova_Data_Entity_PrimaryKeys___0__">ILoggerExtensions.LogDataUpdated&lt;T&gt;(ILogger, PrimaryKeys&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Innova.Prism.Infrastructure.Logging.ILoggerExtensions.LogApplicationClosed.html#Innova_Prism_Infrastructure_Logging_ILoggerExtensions_LogApplicationClosed_Microsoft_Extensions_Logging_ILogger_">ILoggerExtensions.LogApplicationClosed(ILogger)</a>
+  </div>
+  <div>
+      <a class="xref" href="Innova.Prism.Infrastructure.Logging.ILoggerExtensions.LogApplicationStart.html#Innova_Prism_Infrastructure_Logging_ILoggerExtensions_LogApplicationStart_Microsoft_Extensions_Logging_ILogger_">ILoggerExtensions.LogApplicationStart(ILogger)</a>
+  </div>
+  <div>
+      <a class="xref" href="Innova.Prism.Infrastructure.Logging.ILoggerExtensions.LogEditView.html#Innova_Prism_Infrastructure_Logging_ILoggerExtensions_LogEditView__1_Microsoft_Extensions_Logging_ILogger_System_String_Innova_Data_Entity_PrimaryKeys___0__">ILoggerExtensions.LogEditView&lt;T&gt;(ILogger, string, PrimaryKeys&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Innova.Prism.Infrastructure.Logging.ILoggerExtensions.LogExportToExcel.html#Innova_Prism_Infrastructure_Logging_ILoggerExtensions_LogExportToExcel__1_Microsoft_Extensions_Logging_ILogger_">ILoggerExtensions.LogExportToExcel&lt;T&gt;(ILogger)</a>
+  </div>
+  <div>
+      <a class="xref" href="Innova.Prism.Infrastructure.Logging.ILoggerExtensions.LogInsertView.html#Innova_Prism_Infrastructure_Logging_ILoggerExtensions_LogInsertView__1_Microsoft_Extensions_Logging_ILogger_">ILoggerExtensions.LogInsertView&lt;T&gt;(ILogger)</a>
+  </div>
+  <div>
+      <a class="xref" href="Innova.Prism.Infrastructure.Logging.ILoggerExtensions.LogListSearch.html#Innova_Prism_Infrastructure_Logging_ILoggerExtensions_LogListSearch__1_Microsoft_Extensions_Logging_ILogger_System_String_System_String_">ILoggerExtensions.LogListSearch&lt;T&gt;(ILogger, string, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="Innova.Prism.Infrastructure.Logging.ILoggerExtensions.LogListView.html#Innova_Prism_Infrastructure_Logging_ILoggerExtensions_LogListView_Microsoft_Extensions_Logging_ILogger_System_String_">ILoggerExtensions.LogListView(ILogger, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="Innova.Prism.Infrastructure.Logging.ILoggerExtensions.LogPrint.html#Innova_Prism_Infrastructure_Logging_ILoggerExtensions_LogPrint__1_Microsoft_Extensions_Logging_ILogger_Innova_Data_Entity_PrimaryKeys___0__">ILoggerExtensions.LogPrint&lt;T&gt;(ILogger, PrimaryKeys&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Innova.Prism.Infrastructure.Logging.ILoggerExtensions.LogQuickFind.html#Innova_Prism_Infrastructure_Logging_ILoggerExtensions_LogQuickFind__1_Microsoft_Extensions_Logging_ILogger_System_String_">ILoggerExtensions.LogQuickFind&lt;T&gt;(ILogger, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="Innova.Prism.Infrastructure.Logging.ILoggerExtensions.LogSearch.html#Innova_Prism_Infrastructure_Logging_ILoggerExtensions_LogSearch__1_Microsoft_Extensions_Logging_ILogger_System_String_Innova_Data_StructuredSearch_EntityQuery___0__">ILoggerExtensions.LogSearch&lt;T&gt;(ILogger, string, EntityQuery&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Innova.Prism.Infrastructure.Logging.ILoggerExtensions.LogShowView.html#Innova_Prism_Infrastructure_Logging_ILoggerExtensions_LogShowView__1_Microsoft_Extensions_Logging_ILogger_System_String_Innova_Data_Entity_PrimaryKeys___0__">ILoggerExtensions.LogShowView&lt;T&gt;(ILogger, string, PrimaryKeys&lt;T&gt;)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.Logging.CustomLogger.-ctor.html#Innova_Data_Logging_CustomLogger__ctor_System_String_System_Func_System_Boolean__">CustomLogger(string, Func&lt;bool&gt;)</a></dt>
+    <dd><p>Initializes a new instance of the <a class="xref" href="Innova.Data.Logging.CustomLogger.html">CustomLogger</a> class with the specified category name and enabled state.</p>
+</dd>
+  </dl>
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.Logging.CustomLogger.BeginScope.html#Innova_Data_Logging_CustomLogger_BeginScope__1___0_">BeginScope&lt;TState&gt;(TState)</a></dt>
+    <dd><p>Begins a logical operation scope.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.Logging.CustomLogger.IsEnabled.html#Innova_Data_Logging_CustomLogger_IsEnabled_Microsoft_Extensions_Logging_LogLevel_">IsEnabled(LogLevel)</a></dt>
+    <dd><p>Determines whether the logger is enabled for the specified log level.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.Logging.CustomLogger.Log.html#Innova_Data_Logging_CustomLogger_Log__1_Microsoft_Extensions_Logging_LogLevel_Microsoft_Extensions_Logging_EventId___0_System_Exception_System_Func___0_System_Exception_System_String__">Log&lt;TState&gt;(LogLevel, EventId, TState, Exception, Func&lt;TState, Exception, string&gt;)</a></dt>
+    <dd><p>Writes a log message.</p>
+</dd>
+  </dl>
+
+  <h2 class="section" id="events">Events
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.Logging.CustomLogger.LogPublished.html">LogPublished</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Innova Developer Platform
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

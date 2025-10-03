@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class Operator |  Learn Innova Developer Platform </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class Operator |  Learn Innova Developer Platform ">
+      
+      <meta name="description" content="Represents an abstract base class for operators used in structured search.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Learn Innova Developer Platform">
+            Learn Innova Developer Platform
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Innova.Data.StructuredSearch.Operator">
+
+
+
+  <h1 id="Innova_Data_StructuredSearch_Operator" data-uid="Innova.Data.StructuredSearch.Operator" class="text-break">
+Class Operator  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Innova.html">Innova</a>.<a class="xref" href="Innova.Data.html">Data</a>.<a class="xref" href="Innova.Data.StructuredSearch.html">StructuredSearch</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Innova.Data.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents an abstract base class for operators used in structured search.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataContract]
+public abstract class Operator : INotifyPropertyChanged</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><span class="xref">object</span></div>
+      <div><span class="xref">Operator</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="Innova.Data.StructuredSearch.BinaryOperator.html">BinaryOperator</a></div>
+      <div><a class="xref" href="Innova.Data.StructuredSearch.Operators.InOperator.html">InOperator</a></div>
+      <div><a class="xref" href="Innova.Data.StructuredSearch.Operators.RelatedOperatorWrapper-1.html">RelatedOperatorWrapper&lt;TRelatedType&gt;</a></div>
+      <div><a class="xref" href="Innova.Data.StructuredSearch.TertiaryOperator.html">TertiaryOperator</a></div>
+      <div><a class="xref" href="Innova.Data.StructuredSearch.UnaryOperator.html">UnaryOperator</a></div>
+    </dd>
+  </dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.StructuredSearch.Operator.-ctor.html#Innova_Data_StructuredSearch_Operator__ctor_System_String_System_Collections_Generic_List_System_Object__">Operator(string, List&lt;object&gt;)</a></dt>
+    <dd><p>Initializes a new instance of the <a class="xref" href="Innova.Data.StructuredSearch.Operator.html">Operator</a> class with the specified field name and parameters.</p>
+</dd>
+  </dl>
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.StructuredSearch.Operator.FieldName.html#Innova_Data_StructuredSearch_Operator_FieldName">FieldName</a></dt>
+    <dd><p>Gets or sets the field name.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.StructuredSearch.Operator.FieldType.html#Innova_Data_StructuredSearch_Operator_FieldType">FieldType</a></dt>
+    <dd><p>Gets or sets the type of the field.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.StructuredSearch.Operator.FriendlyFieldName.html#Innova_Data_StructuredSearch_Operator_FriendlyFieldName">FriendlyFieldName</a></dt>
+    <dd><p>Gets or sets the friendly field name.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.StructuredSearch.Operator.FriendlyParameter.html#Innova_Data_StructuredSearch_Operator_FriendlyParameter">FriendlyParameter</a></dt>
+    <dd><p>Gets the friendly parameter string.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.StructuredSearch.Operator.IsValid.html#Innova_Data_StructuredSearch_Operator_IsValid">IsValid</a></dt>
+    <dd><p>Gets a value indicating whether the operator is valid.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.StructuredSearch.Operator.OperatorCaption.html#Innova_Data_StructuredSearch_Operator_OperatorCaption">OperatorCaption</a></dt>
+    <dd><p>Gets the operator caption.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.StructuredSearch.Operator.ParameterName.html#Innova_Data_StructuredSearch_Operator_ParameterName">ParameterName</a></dt>
+    <dd><p>Gets or sets the parameter name.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.StructuredSearch.Operator.Parameters.html#Innova_Data_StructuredSearch_Operator_Parameters">Parameters</a></dt>
+    <dd><p>Gets or sets the list of parameters.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.StructuredSearch.Operator.ParentWhereClause.html#Innova_Data_StructuredSearch_Operator_ParentWhereClause">ParentWhereClause</a></dt>
+    <dd><p>Gets or sets the parent where clause.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.StructuredSearch.Operator.RequiredParameterCount.html#Innova_Data_StructuredSearch_Operator_RequiredParameterCount">RequiredParameterCount</a></dt>
+    <dd><p>Gets the required parameter count.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.StructuredSearch.Operator.SelectedItem.html#Innova_Data_StructuredSearch_Operator_SelectedItem">SelectedItem</a></dt>
+    <dd><p>Gets or sets the selected item.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.StructuredSearch.Operator.ValueDescription.html#Innova_Data_StructuredSearch_Operator_ValueDescription">ValueDescription</a></dt>
+    <dd><p>Gets or sets the value description.</p>
+</dd>
+  </dl>
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.StructuredSearch.Operator.CheckForParentWhereClause.html#Innova_Data_StructuredSearch_Operator_CheckForParentWhereClause_System_String_">CheckForParentWhereClause(string)</a></dt>
+    <dd><p>Checks for the parent where clause and formats the child where clause accordingly.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.StructuredSearch.Operator.ClearOperator.html#Innova_Data_StructuredSearch_Operator_ClearOperator">ClearOperator()</a></dt>
+    <dd><p>Clears the operator by setting the parameters to null.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.StructuredSearch.Operator.Clone.html#Innova_Data_StructuredSearch_Operator_Clone">Clone()</a></dt>
+    <dd><p>Creates a clone of the operator.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.StructuredSearch.Operator.EnsureUniqueParameters.html#Innova_Data_StructuredSearch_Operator_EnsureUniqueParameters_System_Int32__">EnsureUniqueParameters(ref int)</a></dt>
+    <dd><p>Ensures that the parameter name is unique.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.StructuredSearch.Operator.GetMemberExpression.html#Innova_Data_StructuredSearch_Operator_GetMemberExpression_System_Linq_Expressions_ParameterExpression_System_String_">GetMemberExpression(ParameterExpression, string)</a></dt>
+    <dd><p>Gets the member expression for the specified property.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.StructuredSearch.Operator.GetWhereExpression.html#Innova_Data_StructuredSearch_Operator_GetWhereExpression__1_System_Linq_Expressions_ParameterExpression_">GetWhereExpression&lt;T&gt;(ParameterExpression)</a></dt>
+    <dd><p>Gets the where expression for the specified type.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.StructuredSearch.Operator.InitializeSelectedItem.html#Innova_Data_StructuredSearch_Operator_InitializeSelectedItem">InitializeSelectedItem()</a></dt>
+    <dd><p>Initializes the selected item.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.StructuredSearch.Operator.OnPropertyChanged.html#Innova_Data_StructuredSearch_Operator_OnPropertyChanged_System_String_">OnPropertyChanged(string)</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.StructuredSearch.Operator.SetOperatorCaption.html#Innova_Data_StructuredSearch_Operator_SetOperatorCaption_System_String_">SetOperatorCaption(string)</a></dt>
+    <dd><p>Sets the operator caption.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.StructuredSearch.Operator.VerifyParameters.html#Innova_Data_StructuredSearch_Operator_VerifyParameters">VerifyParameters()</a></dt>
+    <dd><p>Verifies the parameters of the operator.</p>
+</dd>
+  </dl>
+
+  <h2 class="section" id="events">Events
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.StructuredSearch.Operator.PropertyChanged.html">PropertyChanged</a></dt>
+    <dd><p>Occurs when a property value changes.</p>
+</dd>
+  </dl>
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Innova Developer Platform
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

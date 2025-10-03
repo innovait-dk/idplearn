@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Customize |  Learn Innova Developer Platform </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Customize |  Learn Innova Developer Platform ">
+      
+      
+      <link rel="icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../logo.svg" alt="Learn Innova Developer Platform">
+            Learn Innova Developer Platform
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="customize">Customize</h1>
+
+<p>In this tutorial, we will demonstrate how to expand and integrate the Security AppExtension into your existing data model.</p>
+<p>We will use the Northwind database as our starting point.</p>
+<p><strong>Scenario 1:</strong> We aim to restrict who can edit the products, ensuring not all users have edit permissions.
+First, we create a &quot;ProductManager&quot; role and a &quot;CanEditProduct&quot; operation, which will be used in EntitySecurity.</p>
+<p><strong>Scenario 2:</strong> Next, we expand Scenario 1 into : Certain users should have access to edit only specific products based on the product's category.</p>
+<p>To set up the &quot;standard&quot; Northwind database on an empty SQL database, run the script available <a href="https://github.com/microsoft/sql-server-samples/blob/master/samples/databases/northwind-pubs/instnwnd.sql">from GitHub</a>.</p>
+<p>Create a new IDP solution with the new database.</p>
+<p>Initially, everyone can edit products.</p>
+<p><img src="media/Customize.png" alt="alt text"></p>
+<h2 id="scenario-1">Scenario 1</h2>
+<p>To restrict who can edit the products, follow these steps:</p>
+<ol>
+<li>Add the Security ArchitectureItem</li>
+<li>Add a &quot;CanEditProduct&quot; operation</li>
+<li>Add a &quot;ProductManager&quot; role and check the &quot;CanEditProduct&quot; operation</li>
+<li>Click &quot;Create code&quot;</li>
+</ol>
+<p>Now we have the basic code for checking the operation. Next, we implement the check in the EntitySecurity for products.</p>
+<ol>
+<li>Select &quot;Entity Framework&quot; and select &quot;Products&quot;</li>
+<li>Add code from the <code>code task</code> &quot;Entity Security&quot;</li>
+</ol>
+<p>Customize the <code>ProductsSecurity</code>:</p>
+<pre><code class="lang-cs">    public partial class ProductsSecurity
+    {
+        private readonly IApplicationSecurity _applicationSecurity;
+
+        public ProductsSecurity(IApplicationSecurity applicationSecurity)
+        {
+            _applicationSecurity = applicationSecurity;
+        }
+
+        public override bool CanUpdate()
+        {
+            return _applicationSecurity.CanEditProducts;
+        }
+    }
+</code></pre>
+<p>Now no one can update products as we have not added any users to the role &quot;ProductManagers&quot;. (The Edit-button is not shown)</p>
+<p><img src="media/Customize-1.png" alt="alt text"></p>
+<p>Now we implement the Security AppExtension to manage the roles/groups/members.</p>
+<ol>
+<li>In the designer, click the &quot;Designer&quot; tab and then click &quot;Add AppExtensions&quot;</li>
+<li>Choose <code>Security - only Roles and Groups</code></li>
+<li>Follow the readme.txt for the implementation.</li>
+</ol>
+<p>Now when you run the application, you can manage roles/groups/members. In the application, do the following:</p>
+<ol>
+<li>Add a Group &quot;ProductManagerGroup&quot; and select the role &quot;ProductManagers&quot;</li>
+<li>Add members to that group. (I just added myself)</li>
+</ol>
+<p><img src="media/Customize-2.png" alt="alt text"></p>
+<p>Restart the application to load the new security.</p>
+<p>Now I, and only I, can edit products.</p>
+<p><img src="media/Customize-3.png" alt="alt text"></p>
+<h2 id="scenario-2">Scenario 2</h2>
+<p>Certain users should have access to edit only certain products depending on the product's category.</p>
+<p>This scenario can be handled in different ways:</p>
+<ul>
+<li>If there are two productmanagers today: Just create two roles, two operations, and two groups, but this method is not flexible. If we want ProductManagers for each category, we need to change the code each time a new category is added.</li>
+<li>Change the data model in Northwind so you can choose which group can edit which category.</li>
+</ul>
+<p>We will implement the latter.</p>
+<p>We will start by changing the data model:</p>
+<ol>
+<li>Add a new column <code>SecurityGroupGuid</code> to the table <code>Categories</code></li>
+<li>Add a relationship between the tables <code>dbo.Categories</code> and <code>AppPermission.SecurityGroup</code></li>
+</ol>
+<p><img src="media/Customize-4.png" alt="alt text"></p>
+<p>Open the designer:</p>
+<ol>
+<li>In <code>Entity Framework</code>, add <code>AppPermission.SecurityGroup</code> and click &quot;Create code&quot;</li>
+<li>In <code>User Interface</code>, select <code>Categories</code> and add the field <code>SecurityGroupGuid</code> to show/list/edit/insert</li>
+<li>Change the UpdateControl to <code>ComboboxWithContains</code> and the binding path to <code>SecurityGroup.SecurityGroupName</code></li>
+<li>Set the binding path for the label to <code>SecurityGroup.SecurityGroupName</code></li>
+<li>Change the caption to <code>ProductManagerGroup</code></li>
+<li>Click <code>Create code (for selected)</code></li>
+</ol>
+<p>Run the application.</p>
+<ol>
+<li>Edit the group <code>ProductManagerGroup</code> and change the name to <code>ProductManagerGroup_A</code></li>
+<li>Add a new group <code>ProductManagerGroup_B</code> to the role <code>ProductManagers</code> and add members to it (for testing purposes, add another user besides yourself)</li>
+</ol>
+<p>So we end up with this:</p>
+<p><img src="media/Customize-5.png" alt="alt text"></p>
+<p>Now click on <code>Categories</code> and edit the first one to set the <code>ProductManagerGroup</code>. Repeat this for all categories so we end up with this.</p>
+<p><img src="media/Customize-6.png" alt="alt text"></p>
+<p>Now we can implement the expanded security.</p>
+<ol>
+<li>In the Security ArchitectureItem, add <code>Code Task</code> for <code>ApplicationSecurity</code> and customize it like this:</li>
+</ol>
+<pre><code class="lang-cs">    public partial interface IApplicationSecurity
+    {
+        List&lt;int&gt; CategoriesThatCanBeEdited { get; set; }
+    }
+    
+    public partial class ApplicationSecurity
+    {
+          public List&lt;int&gt; CategoriesThatCanBeEdited { get; set; }=new List&lt;int&gt;();
+    }
+</code></pre>
+<p>The property <code>CategoriesThatCanBeEdited</code>should hold the Id's for the Categories that the currentuser can edit.</p>
+<p>Now we can implement this in the ProducsSecurity by adding this:</p>
+<pre><code class="lang-cs">public partial class ProductsSecurity
+{
+    private readonly IApplicationSecurity _applicationSecurity;
+
+    public ProductsSecurity(IApplicationSecurity applicationSecurity)
+    {
+        _applicationSecurity = applicationSecurity;
+    }
+
+    public override bool CanUpdate(Products entity, object sourceEntity = null)
+    {
+        if( base.CanUpdate(entity, sourceEntity))
+        {
+            if (entity.CategoryID.HasValue)
+            {
+                return _applicationSecurity.CategoriesThatCanBeEdited.Contains(entity.CategoryID.Value);
+            }
+            else
+            {
+                return true;
+            }
+
+        }
+        return false;
+    }
+
+    public override bool CanUpdate()
+    {
+        return _applicationSecurity.CanEditProducts;
+    }
+}
+</code></pre>
+<p>The last step is to set the values in <code>CategoriesThatCanBeEdited</code>:</p>
+<ol>
+<li>In the Security ArchitectureItem add <code>Code Task</code> SecurityBuilder and customize it like this:</li>
+</ol>
+<pre><code class="lang-cs"> public partial class ApplicationSecurityBuilder
+ {
+     private readonly ICategoriesEntityService _categoriesEntityService;
+
+     public ApplicationSecurityBuilder(IApplicationCurrentUser currentUser,
+                                       IApplicationSecurity applicationSecurity,
+                                       ISecurityHandler securityHandler,
+                                       ICategoriesEntityService categoriesEntityService) 
+         : this(currentUser, applicationSecurity, securityHandler)
+     {
+         _categoriesEntityService = categoriesEntityService;
+     }
+     public async override Task Build()
+     {
+         await base.Build().ConfigureAwait(false);
+
+             if (this.Settings.CanEditProducts)
+            {
+                //_permission holds the roles, groups, operations of the current user.
+                var groupGuids = _permissions.SecurityGroups.Select(e =&gt; e.SecurityGroupGuid).ToList();
+
+                this.Settings.CategoriesThatCanBeEdited = await _categoriesEntityService.GetProductManagersCategories(groupGuids).ConfigureAwait(false);
+            }
+     }
+ }
+</code></pre>
+<p>We have customized the Categories EntityService with the methode <code>GetProductManagersCategories</code> like this:</p>
+<pre><code class="lang-cs">    public partial interface ICategoriesEntityService
+    {
+        Task&lt;List&lt;int&gt;&gt; GetProductManagersCategories(List&lt;Guid&gt; groupGuids);
+    }
+    
+    public partial class CategoriesEntityService
+    {
+        public async Task&lt;List&lt;int&gt;&gt; GetProductManagersCategories(List&lt;Guid&gt; groupGuids)
+        {
+            using (var ctx=this.DbContextFactory.CreateDbContext())
+            {
+                return await ctx.Categories.Where(e =&gt;
+                        e.SecurityGroupGuid.HasValue &amp;&amp;
+                        groupGuids.Contains(e.SecurityGroupGuid.Value)).Select(e =&gt; e.CategoryID)
+                        .ToListAsync();
+            }
+        }
+    }
+</code></pre>
+<p>Run the application and now you can only edit products, if you are member of the &quot;right&quot; productmanager group.</p>
+<p>I can not edit this product:</p>
+<p><img src="media/Customize-7.png" alt="alt text"></p>
+<p>But this I can:</p>
+<p><img src="media/Customize-8.png" alt="alt text"></p>
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Innova Developer Platform
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Use of NLog |  Learn Innova Developer Platform </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Use of NLog |  Learn Innova Developer Platform ">
+      
+      
+      <link rel="icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../logo.svg" alt="Learn Innova Developer Platform">
+            Learn Innova Developer Platform
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="use-of-nlog">Use of NLog</h1>
+
+<p>Various kinds of 3rd party logging providers can be used. <a href="https://learn.microsoft.com/en-us/dotnet/core/extensions/logging-providers#third-party-logging-providers">As mentioned here</a></p>
+<p>Below is an example of using <a href="https://nlog-project.org/">NLog</a></p>
+<p><strong>Requirement</strong>: It is desired to use NLog to save logs in text files.</p>
+<p><strong>Task</strong>: Add &quot;NLog.Extensions.Logging&quot; nuget package, add NLog.config file and add AddNLog() in App.xaml.cs</p>
+<p><strong>Implementation</strong>:</p>
+<ol>
+<li><p>Add &quot;NLog.Extensions.Logging&quot; nuget package</p>
+</li>
+<li><p>Create a new text file &quot;NLog.config&quot; and set &quot;Copy to Output directory&quot; -&gt; &quot;Copy Always&quot;</p>
+</li>
+<li><p>Call the AddNLog() method in App.xaml.cs</p>
+</li>
+</ol>
+<p><strong>NLog.config</strong>:</p>
+<pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;nlog xmlns=&quot;http://www.nlog-project.org/schemas/NLog.xsd&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+      throwExceptions=&quot;true&quot;  autoReload=&quot;true&quot;
+      internalLogFile=&quot;C:\temp\Log\NlogInfo.txt&quot;&gt;
+  &lt;variable name=&quot;logDirectory&quot; value=&quot;C:\temp\LogService&quot; /&gt;
+  &lt;variable name=&quot;applicationname&quot; value=&quot;Northwind&quot; /&gt;
+
+  &lt;targets&gt;
+    &lt;target name=&quot;DataLayer&quot; xsi:type=&quot;BufferingWrapper&quot; bufferSize=&quot;1000&quot; flushTimeout=&quot;1000&quot;&gt;
+      &lt;target xsi:type=&quot;File&quot; createDirs=&quot;true&quot; fileName=&quot;${logDirectory}\${applicationname}\Data\${level}\${shortdate}log.txt&quot;  /&gt;
+    &lt;/target&gt;
+
+    &lt;target name=&quot;Errors&quot; xsi:type=&quot;BufferingWrapper&quot; bufferSize=&quot;1000&quot; flushTimeout=&quot;1000&quot;&gt;
+      &lt;target xsi:type=&quot;File&quot; createDirs=&quot;true&quot; fileName=&quot;${logDirectory}\${applicationname}\Errors\${level}\${shortdate}log.txt&quot;  /&gt;
+    &lt;/target&gt;
+
+    &lt;target name=&quot;Others&quot; xsi:type=&quot;BufferingWrapper&quot; bufferSize=&quot;1000&quot; flushTimeout=&quot;1000&quot;&gt;
+      &lt;target xsi:type=&quot;File&quot; createDirs=&quot;true&quot; fileName=&quot;${logDirectory}\${applicationname}\Others\${level}\${shortdate}log.txt&quot;  /&gt;
+    &lt;/target&gt;
+
+  &lt;/targets&gt;
+  &lt;rules&gt;
+    &lt;logger name=&quot;Microsoft.EntityFrameworkCore.Database.*&quot; levels=&quot;Info&quot; writeTo=&quot;DataLayer&quot; final=&quot;true&quot;  /&gt;
+    &lt;logger name=&quot;Microsoft.EntityFrameworkCore.*&quot; levels=&quot;Trace,Debug,Info,Warn&quot;  final=&quot;true&quot; /&gt;
+    &lt;logger name=&quot;*&quot; levels=&quot;Trace,Debug,Info,Warn&quot; writeTo=&quot;Others&quot; final=&quot;true&quot;  /&gt;
+    &lt;logger name=&quot;*&quot; levels=&quot;Error,Fatal&quot; writeTo=&quot;Errors&quot;  /&gt;
+  &lt;/rules&gt;
+&lt;/nlog&gt;
+</code></pre>
+<p><strong>App.xaml.cs</strong></p>
+<pre><code class="lang-c#">  protected override void ConfigurateBuilder(HostApplicationBuilder builder)
+  {
+    base.ConfigurateBuilder(builder);
+    builder.Logging.AddNLog();
+  }
+</code></pre>
+<p>Now everything is logged down in text files based on the above rules in NLog.config. Below is an example of a log file for the previous example <a href="log_application.html">knap-klik-logging</a></p>
+<p><img src="media/nlog.png" alt="Alt text"></p>
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Innova Developer Platform
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

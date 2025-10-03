@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class EntitySearchViewModel&lt;T&gt; |  Learn Innova Developer Platform </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class EntitySearchViewModel&lt;T&gt; |  Learn Innova Developer Platform ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Learn Innova Developer Platform">
+            Learn Innova Developer Platform
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel`1">
+
+
+
+  <h1 id="Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1" data-uid="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel`1" class="text-break">
+Class EntitySearchViewModel&lt;T&gt;  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Innova.html">Innova</a>.<a class="xref" href="Innova.Prism.html">Prism</a>.<a class="xref" href="Innova.Prism.Library.html">Library</a>.<a class="xref" href="Innova.Prism.Library.StructuredSearch.html">StructuredSearch</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Innova.Prism.Library.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class EntitySearchViewModel&lt;T&gt; : NavigationAwareViewModel&lt;NavigationState&gt;, INotifyPropertyChanged, INavigationAwareViewModel&lt;NavigationState&gt;, IRegionMemberLifetime where T : class</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><span class="xref">object</span></div>
+      <div><a class="xref" href="https://github.com/PrismLibrary/Prism/blob/15140a61976d0a224cd6ebb9ee1f7ca63db02b47/src/Prism.Core/Mvvm/BindableBase.cs">BindableBase</a></div>
+      <div><a class="xref" href="Innova.Prism.Library.BaseViewModels.NavigationAwareViewModel-1.html">NavigationAwareViewModel</a>&lt;<a class="xref" href="Innova.Prism.Library.BaseViewModels.NavigationState.html">NavigationState</a>&gt;</div>
+      <div><span class="xref">EntitySearchViewModel&lt;T&gt;</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
+      <div><a class="xref" href="Innova.Prism.Library.BaseViewModels.INavigationAwareViewModel-1.html">INavigationAwareViewModel</a>&lt;<a class="xref" href="Innova.Prism.Library.BaseViewModels.NavigationState.html">NavigationState</a>&gt;</div>
+      <div><span class="xref">IRegionMemberLifetime</span></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.-ctor.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1__ctor_Innova_Prism_Library_Services_IWindowDialogService_Prism_Events_IEventAggregator_System_Windows_Threading_Dispatcher_Innova_Data_Entity_IEntityService__0__Innova_Data_AppSettings_ISavedQueryService_Prism_Regions_IRegionManager_">EntitySearchViewModel(IWindowDialogService, IEventAggregator, Dispatcher, IEntityService&lt;T&gt;, ISavedQueryService, IRegionManager)</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.SearchFieldsKey.html">SearchFieldsKey</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.SearchFilterKey.html">SearchFilterKey</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.ActiveEntityQuery.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_ActiveEntityQuery">ActiveEntityQuery</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.AdvancedSearchQuery.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_AdvancedSearchQuery">AdvancedSearchQuery</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.CanSaveQuery.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_CanSaveQuery">CanSaveQuery</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.CanSaveQueryByDefault.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_CanSaveQueryByDefault">CanSaveQueryByDefault</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.ClearAllOperatorsCommand.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_ClearAllOperatorsCommand">ClearAllOperatorsCommand</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.ControlIsExpanded.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_ControlIsExpanded">ControlIsExpanded</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.DeleteQueryCommand.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_DeleteQueryCommand">DeleteQueryCommand</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.DeleteQueryImage.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_DeleteQueryImage">DeleteQueryImage</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.Dispatcher.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_Dispatcher">Dispatcher</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.EntitySavedQueryTypeByDefault.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_EntitySavedQueryTypeByDefault">EntitySavedQueryTypeByDefault</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.EntitySavedQueryTypeByUser.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_EntitySavedQueryTypeByUser">EntitySavedQueryTypeByUser</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.EntityService.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_EntityService">EntityService</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.EventAggregator.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_EventAggregator">EventAggregator</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.ExecuteSearchCommand.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_ExecuteSearchCommand">ExecuteSearchCommand</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.ExecuteSearchOnStartup.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_ExecuteSearchOnStartup">ExecuteSearchOnStartup</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.Fields.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_Fields">Fields</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.IsPopupOpen.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_IsPopupOpen">IsPopupOpen</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.IsValid.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_IsValid">IsValid</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.KeepAlive.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_KeepAlive">KeepAlive</a></dt>
+    <dd><p>Gets a value indicating whether this instance should be kept-alive upon deactivation.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.MaxResultCount.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_MaxResultCount">MaxResultCount</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.MaxResultCountItemSource.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_MaxResultCountItemSource">MaxResultCountItemSource</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.NewQueryCommand.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_NewQueryCommand">NewQueryCommand</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.NewTitle.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_NewTitle">NewTitle</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.Queries.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_Queries">Queries</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.QueryFields.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_QueryFields">QueryFields</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.QueryOperators.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_QueryOperators">QueryOperators</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.QuerySetByViewState.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_QuerySetByViewState">QuerySetByViewState</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.RegionManager.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_RegionManager">RegionManager</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.SaveQueryByDefault.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_SaveQueryByDefault">SaveQueryByDefault</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.SaveQueryCommand.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_SaveQueryCommand">SaveQueryCommand</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.SaveStateCommand.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_SaveStateCommand">SaveStateCommand</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.SearchViewMode.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_SearchViewMode">SearchViewMode</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.SelectedField.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_SelectedField">SelectedField</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.SelectedLogicalOperator.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_SelectedLogicalOperator">SelectedLogicalOperator</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.SelectedSavedQuery.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_SelectedSavedQuery">SelectedSavedQuery</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.SelectedSavedQueryIsDefault.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_SelectedSavedQueryIsDefault">SelectedSavedQueryIsDefault</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.SetDefaultQueryCommand.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_SetDefaultQueryCommand">SetDefaultQueryCommand</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.ShowAdvancedSearch.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_ShowAdvancedSearch">ShowAdvancedSearch</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.ShowDetails.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_ShowDetails">ShowDetails</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.ShowMaxResultCountSelector.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_ShowMaxResultCountSelector">ShowMaxResultCountSelector</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.ShowSearchControl.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_ShowSearchControl">ShowSearchControl</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.ShowSetLogicalOperators.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_ShowSetLogicalOperators">ShowSetLogicalOperators</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.ShowSimpleSearch.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_ShowSimpleSearch">ShowSimpleSearch</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.ViewKey.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_ViewKey">ViewKey</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.WindowDialogService.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_WindowDialogService">WindowDialogService</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.CanClearAllOperators.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_CanClearAllOperators">CanClearAllOperators()</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.CanExecuteAddOperatorToFilter.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_CanExecuteAddOperatorToFilter">CanExecuteAddOperatorToFilter()</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.CanExecuteSearch.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_CanExecuteSearch">CanExecuteSearch()</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.ExecuteClearAllOperators.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_ExecuteClearAllOperators">ExecuteClearAllOperators()</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.ExecuteSearch.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_ExecuteSearch">ExecuteSearch()</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.GetEntityQuery.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_GetEntityQuery">GetEntityQuery()</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.GetEntityQueryAdvanced.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_GetEntityQueryAdvanced">GetEntityQueryAdvanced()</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.GetViewState.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_GetViewState">GetViewState()</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.InitializeCommands.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_InitializeCommands">InitializeCommands()</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.LoadData.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_LoadData">LoadData()</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.OnNavigatedFrom.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_OnNavigatedFrom_Prism_Regions_NavigationParameters_">OnNavigatedFrom(NavigationParameters)</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.OnNavigatedTo.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_OnNavigatedTo_Prism_Regions_NavigationParameters_">OnNavigatedTo(NavigationParameters)</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.PublishSearchEntityQuery.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_PublishSearchEntityQuery_Innova_Data_StructuredSearch_EntityQuery__0__">PublishSearchEntityQuery(EntityQuery&lt;T&gt;)</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.SetViewState.html#Innova_Prism_Library_StructuredSearch_EntitySearchViewModel_1_SetViewState_Innova_Data_StructuredSearch_EntitySavedQuery_">SetViewState(EntitySavedQuery)</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h2 class="section" id="events">Events
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.StructuredSearch.EntitySearchViewModel-1.ClearAll.html">ClearAll</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Innova Developer Platform
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class TempTableDataReader |  Learn Innova Developer Platform </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class TempTableDataReader |  Learn Innova Developer Platform ">
+      
+      <meta name="description" content="Represents a data reader for a temporary table.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Learn Innova Developer Platform">
+            Learn Innova Developer Platform
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Innova.Data.TempTableDataReader">
+
+
+
+  <h1 id="Innova_Data_TempTableDataReader" data-uid="Innova.Data.TempTableDataReader" class="text-break">
+Class TempTableDataReader  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Innova.html">Innova</a>.<a class="xref" href="Innova.Data.html">Data</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Innova.Data.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a data reader for a temporary table.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class TempTableDataReader : IDataReader, IDisposable, IDataRecord</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><span class="xref">object</span></div>
+      <div><span class="xref">TempTableDataReader</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatareader">IDataReader</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatarecord">IDataRecord</a></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.TempTableDataReader.-ctor.html#Innova_Data_TempTableDataReader__ctor_System_Collections_Generic_IEnumerable_Innova_Data_Entity_IPrimaryKey__">TempTableDataReader(IEnumerable&lt;IPrimaryKey&gt;)</a></dt>
+    <dd><p>Initializes a new instance of the <a class="xref" href="Innova.Data.TempTableDataReader.html">TempTableDataReader</a> class.</p>
+</dd>
+  </dl>
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.TempTableDataReader.Depth.html#Innova_Data_TempTableDataReader_Depth">Depth</a></dt>
+    <dd><p>Gets a value indicating the depth of nesting for the current row.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.TempTableDataReader.FieldCount.html#Innova_Data_TempTableDataReader_FieldCount">FieldCount</a></dt>
+    <dd><p>Gets the number of fields in the data reader.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.TempTableDataReader.IsClosed.html#Innova_Data_TempTableDataReader_IsClosed">IsClosed</a></dt>
+    <dd><p>Gets a value indicating whether the data reader is closed.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.TempTableDataReader.Item.html#Innova_Data_TempTableDataReader_Item_System_Int32_">this[int]</a></dt>
+    <dd><p>Gets the column located at the specified index.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.TempTableDataReader.Item.html#Innova_Data_TempTableDataReader_Item_System_String_">this[string]</a></dt>
+    <dd><p>Gets the column with the specified name.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.TempTableDataReader.RecordsAffected.html#Innova_Data_TempTableDataReader_RecordsAffected">RecordsAffected</a></dt>
+    <dd><p>Gets the number of rows changed, inserted, or deleted by execution of the SQL statement.</p>
+</dd>
+  </dl>
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.TempTableDataReader.Close.html#Innova_Data_TempTableDataReader_Close">Close()</a></dt>
+    <dd><p>Closes the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatareader">IDataReader</a> Object.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.TempTableDataReader.Dispose.html#Innova_Data_TempTableDataReader_Dispose">Dispose()</a></dt>
+    <dd><p>Releases all resources used by the data reader.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.TempTableDataReader.GetBoolean.html#Innova_Data_TempTableDataReader_GetBoolean_System_Int32_">GetBoolean(int)</a></dt>
+    <dd><p>Gets the value of the specified column as a Boolean.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.TempTableDataReader.GetByte.html#Innova_Data_TempTableDataReader_GetByte_System_Int32_">GetByte(int)</a></dt>
+    <dd><p>Gets the 8-bit unsigned integer value of the specified column.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.TempTableDataReader.GetBytes.html#Innova_Data_TempTableDataReader_GetBytes_System_Int32_System_Int64_System_Byte___System_Int32_System_Int32_">GetBytes(int, long, byte[], int, int)</a></dt>
+    <dd><p>Reads a stream of bytes from the specified column offset into the buffer as an array, starting at the given buffer offset.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.TempTableDataReader.GetChar.html#Innova_Data_TempTableDataReader_GetChar_System_Int32_">GetChar(int)</a></dt>
+    <dd><p>Gets the character value of the specified column.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.TempTableDataReader.GetChars.html#Innova_Data_TempTableDataReader_GetChars_System_Int32_System_Int64_System_Char___System_Int32_System_Int32_">GetChars(int, long, char[], int, int)</a></dt>
+    <dd><p>Reads a stream of characters from the specified column offset into the buffer as an array, starting at the given buffer offset.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.TempTableDataReader.GetData.html#Innova_Data_TempTableDataReader_GetData_System_Int32_">GetData(int)</a></dt>
+    <dd><p>Returns an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatareader">IDataReader</a> for the specified column ordinal.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.TempTableDataReader.GetDataTypeName.html#Innova_Data_TempTableDataReader_GetDataTypeName_System_Int32_">GetDataTypeName(int)</a></dt>
+    <dd><p>Gets the data type information for the specified field.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.TempTableDataReader.GetDateTime.html#Innova_Data_TempTableDataReader_GetDateTime_System_Int32_">GetDateTime(int)</a></dt>
+    <dd><p>Gets the date and time data value of the specified field.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.TempTableDataReader.GetDecimal.html#Innova_Data_TempTableDataReader_GetDecimal_System_Int32_">GetDecimal(int)</a></dt>
+    <dd><p>Gets the fixed-position numeric value of the specified field.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.TempTableDataReader.GetDouble.html#Innova_Data_TempTableDataReader_GetDouble_System_Int32_">GetDouble(int)</a></dt>
+    <dd><p>Gets the double-precision floating point number of the specified field.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.TempTableDataReader.GetFieldType.html#Innova_Data_TempTableDataReader_GetFieldType_System_Int32_">GetFieldType(int)</a></dt>
+    <dd><p>Gets the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> information corresponding to the type of <span class="xref">object</span> that would be returned from <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatarecord.getvalue">GetValue(int)</a>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.TempTableDataReader.GetFloat.html#Innova_Data_TempTableDataReader_GetFloat_System_Int32_">GetFloat(int)</a></dt>
+    <dd><p>Gets the single-precision floating point number of the specified field.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.TempTableDataReader.GetGuid.html#Innova_Data_TempTableDataReader_GetGuid_System_Int32_">GetGuid(int)</a></dt>
+    <dd><p>Returns the GUID value of the specified field.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.TempTableDataReader.GetInt16.html#Innova_Data_TempTableDataReader_GetInt16_System_Int32_">GetInt16(int)</a></dt>
+    <dd><p>Gets the 16-bit signed integer value of the specified field.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.TempTableDataReader.GetInt32.html#Innova_Data_TempTableDataReader_GetInt32_System_Int32_">GetInt32(int)</a></dt>
+    <dd><p>Gets the 32-bit signed integer value of the specified field.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.TempTableDataReader.GetInt64.html#Innova_Data_TempTableDataReader_GetInt64_System_Int32_">GetInt64(int)</a></dt>
+    <dd><p>Gets the 64-bit signed integer value of the specified field.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.TempTableDataReader.GetName.html#Innova_Data_TempTableDataReader_GetName_System_Int32_">GetName(int)</a></dt>
+    <dd><p>Gets the name for the field to find.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.TempTableDataReader.GetOrdinal.html#Innova_Data_TempTableDataReader_GetOrdinal_System_String_">GetOrdinal(string)</a></dt>
+    <dd><p>Return the index of the named field.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.TempTableDataReader.GetSchemaTable.html#Innova_Data_TempTableDataReader_GetSchemaTable">GetSchemaTable()</a></dt>
+    <dd><p>Returns a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.datatable">DataTable</a> that describes the column metadata of the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idatareader">IDataReader</a>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.TempTableDataReader.GetString.html#Innova_Data_TempTableDataReader_GetString_System_Int32_">GetString(int)</a></dt>
+    <dd><p>Gets the string value of the specified field.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.TempTableDataReader.GetValue.html#Innova_Data_TempTableDataReader_GetValue_System_Int32_">GetValue(int)</a></dt>
+    <dd><p>Gets the value of the specified field.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.TempTableDataReader.GetValues.html#Innova_Data_TempTableDataReader_GetValues_System_Object___">GetValues(object[])</a></dt>
+    <dd><p>Populates an array of objects with the column values of the current record.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.TempTableDataReader.IsDBNull.html#Innova_Data_TempTableDataReader_IsDBNull_System_Int32_">IsDBNull(int)</a></dt>
+    <dd><p>Return whether the specified field is set to null.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.TempTableDataReader.NextResult.html#Innova_Data_TempTableDataReader_NextResult">NextResult()</a></dt>
+    <dd><p>Advances the data reader to the next result, when reading the results of batch SQL statements.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Data.TempTableDataReader.Read.html#Innova_Data_TempTableDataReader_Read">Read()</a></dt>
+    <dd><p>Advances the data reader to the next record.</p>
+</dd>
+  </dl>
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Innova Developer Platform
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

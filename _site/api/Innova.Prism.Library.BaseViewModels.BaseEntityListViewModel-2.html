@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class BaseEntityListViewModel&lt;T, TResult&gt; |  Learn Innova Developer Platform </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class BaseEntityListViewModel&lt;T, TResult&gt; |  Learn Innova Developer Platform ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Learn Innova Developer Platform">
+            Learn Innova Developer Platform
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Innova.Prism.Library.BaseViewModels.BaseEntityListViewModel`2">
+
+
+
+  <h1 id="Innova_Prism_Library_BaseViewModels_BaseEntityListViewModel_2" data-uid="Innova.Prism.Library.BaseViewModels.BaseEntityListViewModel`2" class="text-break">
+Class BaseEntityListViewModel&lt;T, TResult&gt;  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Innova.html">Innova</a>.<a class="xref" href="Innova.Prism.html">Prism</a>.<a class="xref" href="Innova.Prism.Library.html">Library</a>.<a class="xref" href="Innova.Prism.Library.BaseViewModels.html">BaseViewModels</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Innova.Prism.Library.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class BaseEntityListViewModel&lt;T, TResult&gt; : BaseCombinedListViewModel&lt;T, TResult&gt;, INotifyPropertyChanged, IConfirmNavigationRequest, INavigationAware, IRegionMemberLifetime, IPagingViewModel, ISupportEntityListView, IEntityListViewState, IListViewModel&lt;T, TResult&gt;, IListViewModel, IListDeleteViewModel, ISupportSelectFilter where T : class where TResult : class, IEntityWithKey&lt;T&gt;</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+    <dt><code>TResult</code></dt>
+    <dd></dd>
+  </dl>
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><span class="xref">object</span></div>
+      <div><a class="xref" href="https://github.com/PrismLibrary/Prism/blob/15140a61976d0a224cd6ebb9ee1f7ca63db02b47/src/Prism.Core/Mvvm/BindableBase.cs">BindableBase</a></div>
+      <div><a class="xref" href="Innova.Prism.Library.BaseViewModels.BaseHeaderViewModel.html">BaseHeaderViewModel</a></div>
+      <div><a class="xref" href="Innova.Prism.Library.BaseViewModels.BaseDataViewModelNavigationAware.html">BaseDataViewModelNavigationAware</a></div>
+      <div><a class="xref" href="Innova.Prism.Library.BaseViewModels.BaseCombinedListViewModel-2.html">BaseCombinedListViewModel</a>&lt;T, TResult&gt;</div>
+      <div><span class="xref">BaseEntityListViewModel&lt;T, TResult&gt;</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
+      <div><span class="xref">IConfirmNavigationRequest</span></div>
+      <div><span class="xref">INavigationAware</span></div>
+      <div><span class="xref">IRegionMemberLifetime</span></div>
+      <div><a class="xref" href="Innova.Prism.Library.BaseViewModels.IPagingViewModel.html">IPagingViewModel</a></div>
+      <div><a class="xref" href="Innova.Prism.Infrastructure.Interfaces.ISupportEntityListView.html">ISupportEntityListView</a></div>
+      <div><a class="xref" href="Innova.Prism.Library.BaseViewModels.IEntityListViewState.html">IEntityListViewState</a></div>
+      <div><a class="xref" href="Innova.Prism.Infrastructure.Interfaces.IListViewModel-2.html">IListViewModel</a>&lt;T, TResult&gt;</div>
+      <div><a class="xref" href="Innova.Prism.Infrastructure.Interfaces.IListViewModel.html">IListViewModel</a></div>
+      <div><a class="xref" href="Innova.Prism.Infrastructure.Interfaces.IListDeleteViewModel.html">IListDeleteViewModel</a></div>
+      <div><a class="xref" href="Innova.Prism.Library.BaseViewModels.ISupportSelectFilter.html">ISupportSelectFilter</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="Innova.Prism.Library.BaseViewModels.BaseEntityListViewModel-1.html">BaseEntityListViewModel&lt;TSource&gt;</a></div>
+      <div><a class="xref" href="Innova.Prism.Telerik.ViewModels.TelerikListViewModel-2.html">TelerikListViewModel&lt;T, TResult&gt;</a></div>
+    </dd>
+  </dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.BaseViewModels.BaseEntityListViewModel-2.-ctor.html#Innova_Prism_Library_BaseViewModels_BaseEntityListViewModel_2__ctor_Innova_Prism_Infrastructure_Views_IViewStateManager_Prism_Events_IEventAggregator_Innova_Prism_Library_Services_IListViewModelService__0__1__Innova_Prism_Library_Menus_Models_IListMenuService__0__1__Microsoft_Extensions_Logging_ILogger_Innova_Prism_Library_BaseViewModels_BaseEntityListViewModel__0__1___">BaseEntityListViewModel(IViewStateManager, IEventAggregator, IListViewModelService&lt;T, TResult&gt;, IListMenuService&lt;T, TResult&gt;, ILogger&lt;BaseEntityListViewModel&lt;T, TResult&gt;&gt;)</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.BaseViewModels.BaseEntityListViewModel-2.ExecuteExportToExcelDelegate.html">ExecuteExportToExcelDelegate</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.BaseViewModels.BaseEntityListViewModel-2.ExecuteExportToHtmlDelegate.html">ExecuteExportToHtmlDelegate</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.BaseViewModels.BaseEntityListViewModel-2.ExecuteExportToXpsDelegate.html">ExecuteExportToXpsDelegate</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.BaseViewModels.BaseEntityListViewModel-2.CanUpdate.html#Innova_Prism_Library_BaseViewModels_BaseEntityListViewModel_2_CanUpdate">CanUpdate</a></dt>
+    <dd><p>Gets a value indicating whether the items can be updated.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.BaseViewModels.BaseEntityListViewModel-2.CheckedCommand.html#Innova_Prism_Library_BaseViewModels_BaseEntityListViewModel_2_CheckedCommand">CheckedCommand</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.BaseViewModels.BaseEntityListViewModel-2.CheckedItems.html#Innova_Prism_Library_BaseViewModels_BaseEntityListViewModel_2_CheckedItems">CheckedItems</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.BaseViewModels.BaseEntityListViewModel-2.ContextMenus.html#Innova_Prism_Library_BaseViewModels_BaseEntityListViewModel_2_ContextMenus">ContextMenus</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.BaseViewModels.BaseEntityListViewModel-2.InlineSearch.html#Innova_Prism_Library_BaseViewModels_BaseEntityListViewModel_2_InlineSearch">InlineSearch</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.BaseViewModels.BaseEntityListViewModel-2.MenuService.html#Innova_Prism_Library_BaseViewModels_BaseEntityListViewModel_2_MenuService">MenuService</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.BaseViewModels.BaseEntityListViewModel-2.SearchClearCommand.html#Innova_Prism_Library_BaseViewModels_BaseEntityListViewModel_2_SearchClearCommand">SearchClearCommand</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.BaseViewModels.BaseEntityListViewModel-2.SearchCommand.html#Innova_Prism_Library_BaseViewModels_BaseEntityListViewModel_2_SearchCommand">SearchCommand</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.BaseViewModels.BaseEntityListViewModel-2.ShowContextMenu.html#Innova_Prism_Library_BaseViewModels_BaseEntityListViewModel_2_ShowContextMenu">ShowContextMenu</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.BaseViewModels.BaseEntityListViewModel-2.ShowList.html#Innova_Prism_Library_BaseViewModels_BaseEntityListViewModel_2_ShowList">ShowList</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.BaseViewModels.BaseEntityListViewModel-2.SourceActiveItem.html#Innova_Prism_Library_BaseViewModels_BaseEntityListViewModel_2_SourceActiveItem">SourceActiveItem</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.BaseViewModels.BaseEntityListViewModel-2.SubscribeEntityCreateEvent.html#Innova_Prism_Library_BaseViewModels_BaseEntityListViewModel_2_SubscribeEntityCreateEvent">SubscribeEntityCreateEvent</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.BaseViewModels.BaseEntityListViewModel-2.UseSelectFilter.html#Innova_Prism_Library_BaseViewModels_BaseEntityListViewModel_2_UseSelectFilter">UseSelectFilter</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.BaseViewModels.BaseEntityListViewModel-2.GetSearchFilter.html#Innova_Prism_Library_BaseViewModels_BaseEntityListViewModel_2_GetSearchFilter_System_String_">GetSearchFilter(string)</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.BaseViewModels.BaseEntityListViewModel-2.GetSelectedItemsPrimaryKeys.html#Innova_Prism_Library_BaseViewModels_BaseEntityListViewModel_2_GetSelectedItemsPrimaryKeys">GetSelectedItemsPrimaryKeys()</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.BaseViewModels.BaseEntityListViewModel-2.InsertItemAsync.html#Innova_Prism_Library_BaseViewModels_BaseEntityListViewModel_2_InsertItemAsync__1_">InsertItemAsync(TResult)</a></dt>
+    <dd><p>Inserts the specified item asynchronously.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.BaseViewModels.BaseEntityListViewModel-2.MakeEntityUpdatable.html#Innova_Prism_Library_BaseViewModels_BaseEntityListViewModel_2_MakeEntityUpdatable_System_Object_">MakeEntityUpdatable(object)</a></dt>
+    <dd><p>Makes the specified entity updatable.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.BaseViewModels.BaseEntityListViewModel-2.OnCanSelectEntity.html#Innova_Prism_Library_BaseViewModels_BaseEntityListViewModel_2_OnCanSelectEntity__1_">OnCanSelectEntity(TResult)</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.BaseViewModels.BaseEntityListViewModel-2.OnCheckedCommand.html#Innova_Prism_Library_BaseViewModels_BaseEntityListViewModel_2_OnCheckedCommand__1_">OnCheckedCommand(TResult)</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.BaseViewModels.BaseEntityListViewModel-2.OnEntityCreated.html#Innova_Prism_Library_BaseViewModels_BaseEntityListViewModel_2_OnEntityCreated_Innova_Data_Entity_PrimaryKeys__0__">OnEntityCreated(PrimaryKeys&lt;T&gt;)</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.BaseViewModels.BaseEntityListViewModel-2.OnEntityKeysSelectedClearFilterEvent.html#Innova_Prism_Library_BaseViewModels_BaseEntityListViewModel_2_OnEntityKeysSelectedClearFilterEvent">OnEntityKeysSelectedClearFilterEvent()</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.BaseViewModels.BaseEntityListViewModel-2.OnEntityKeysSelectedFilterEvent.html#Innova_Prism_Library_BaseViewModels_BaseEntityListViewModel_2_OnEntityKeysSelectedFilterEvent">OnEntityKeysSelectedFilterEvent()</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.BaseViewModels.BaseEntityListViewModel-2.OnEntityUpdated.html#Innova_Prism_Library_BaseViewModels_BaseEntityListViewModel_2_OnEntityUpdated_Innova_Data_Entity_PrimaryKeys__0__">OnEntityUpdated(PrimaryKeys&lt;T&gt;)</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.BaseViewModels.BaseEntityListViewModel-2.OnExecuteSearch.html#Innova_Prism_Library_BaseViewModels_BaseEntityListViewModel_2_OnExecuteSearch_Innova_Data_StructuredSearch_EntityQuery__0__">OnExecuteSearch(EntityQuery&lt;T&gt;)</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.BaseViewModels.BaseEntityListViewModel-2.OnNavigatedFrom.html#Innova_Prism_Library_BaseViewModels_BaseEntityListViewModel_2_OnNavigatedFrom_Prism_Regions_NavigationContext_">OnNavigatedFrom(NavigationContext)</a></dt>
+    <dd><p>Called when the implementer is being navigated away from.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.BaseViewModels.BaseEntityListViewModel-2.OnNavigatedTo.html#Innova_Prism_Library_BaseViewModels_BaseEntityListViewModel_2_OnNavigatedTo_Prism_Regions_NavigationContext_">OnNavigatedTo(NavigationContext)</a></dt>
+    <dd><p>Called when the implementer has been navigated to.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.BaseViewModels.BaseEntityListViewModel-2.OnNavigatedTo.html#Innova_Prism_Library_BaseViewModels_BaseEntityListViewModel_2_OnNavigatedTo_Prism_Regions_NavigationContext_System_Boolean_">OnNavigatedTo(NavigationContext, bool)</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.BaseViewModels.BaseEntityListViewModel-2.OnSearch.html#Innova_Prism_Library_BaseViewModels_BaseEntityListViewModel_2_OnSearch_System_String_">OnSearch(string)</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.BaseViewModels.BaseEntityListViewModel-2.OnSelectEntity.html#Innova_Prism_Library_BaseViewModels_BaseEntityListViewModel_2_OnSelectEntity__1_">OnSelectEntity(TResult)</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.BaseViewModels.BaseEntityListViewModel-2.OnSelectedItemsChanged.html#Innova_Prism_Library_BaseViewModels_BaseEntityListViewModel_2_OnSelectedItemsChanged">OnSelectedItemsChanged()</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.BaseViewModels.BaseEntityListViewModel-2.PublishEntitySelectedEvent.html#Innova_Prism_Library_BaseViewModels_BaseEntityListViewModel_2_PublishEntitySelectedEvent__1_Innova_Data_Entity_PrimaryKeys___0__">PublishEntitySelectedEvent&lt;TEntity&gt;(PrimaryKeys&lt;TEntity&gt;)</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.BaseViewModels.BaseEntityListViewModel-2.RefreshItems.html#Innova_Prism_Library_BaseViewModels_BaseEntityListViewModel_2_RefreshItems_System_Collections_Generic_IEnumerable__1__">RefreshItems(IEnumerable&lt;TResult&gt;)</a></dt>
+    <dd><p>Refreshes the items with the specified results.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.BaseViewModels.BaseEntityListViewModel-2.SetEntity.html#Innova_Prism_Library_BaseViewModels_BaseEntityListViewModel_2_SetEntity_System_Collections_IList__System_Int32__1_">SetEntity(ref IList, int, TResult)</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.BaseViewModels.BaseEntityListViewModel-2.SetEventSubscription.html#Innova_Prism_Library_BaseViewModels_BaseEntityListViewModel_2_SetEventSubscription">SetEventSubscription()</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.BaseViewModels.BaseEntityListViewModel-2.SetExecuteExportToHtmlDelegate.html#Innova_Prism_Library_BaseViewModels_BaseEntityListViewModel_2_SetExecuteExportToHtmlDelegate_System_Func_System_Data_DataTable__">SetExecuteExportToHtmlDelegate(Func&lt;DataTable&gt;)</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Innova.Prism.Library.BaseViewModels.BaseEntityListViewModel-2.UpdateEntity.html#Innova_Prism_Library_BaseViewModels_BaseEntityListViewModel_2_UpdateEntity_Innova_Data_Entity_PrimaryKeys__0__System_Collections_IList_">UpdateEntity(PrimaryKeys&lt;T&gt;, IList)</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Innova Developer Platform
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

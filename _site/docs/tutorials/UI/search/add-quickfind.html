@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Create QuickFind |  Learn Innova Developer Platform </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Create QuickFind |  Learn Innova Developer Platform ">
+      
+      
+      <link rel="icon" href="../../../../favicon.ico">
+      <link rel="stylesheet" href="../../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../../index.html">
+            <img id="logo" class="svg" src="../../../../logo.svg" alt="Learn Innova Developer Platform">
+            Learn Innova Developer Platform
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="create-quickfind">Create QuickFind</h1>
+
+<p>QuickFinds are made in the shell's viewmodel.</p>
+<p>Below is shown how to create QuickFinds in two different ways in the constructor of MainViewModel.cs.</p>
+<h2 id="example-1---quickfind-on-a-field">Example 1 - QuickFind on a field</h2>
+<p>The first example shows how to create a QuickFind on the <code>CompanyName</code> field of the <code>Customers</code> entity.</p>
+<p>In the designer:</p>
+<p>Select &quot;User Interface&quot;</p>
+<p>Select &quot;Customers&quot;</p>
+<p>Select the &quot;CompanyName&quot; field</p>
+<p>In &quot;Code Tasks&quot; select &quot;QuickFind&quot; and click &quot;Add Code&quot;. A QuickFindCompanyName.cs file is now generated, which can be freely adapted as shown below.</p>
+<p>Implement the code as described in the TODO: comment.</p>
+<pre><code class="lang-csharp">  //TODO: this should be added to the servicecollection like this:
+  //serviceCollection.AddTransient&lt;Innova.Prism.Library.Search.ISearchItemViewModel, QuickFindCompanyName&gt;();
+  //or in the search module like this:
+      //public override void RegisterTypes(IContainerRegistry containerRegistry)
+      //{
+      //   base.RegisterTypes(containerRegistry);
+      //   containerRegistry.Register&lt;Innova.Prism.Library.Search.ISearchItemViewModel, QuickFindCompanyName&gt;(&quot;QuickFindCompanyName&quot;);
+      //}
+
+  public class QuickFindCompanyName : QuickFindSearchItemViewModel&lt;Northwind.Data.Entity.Customers&gt;, ISearchItemViewModel
+  {
+      public QuickFindCompanyName(IQuickFindNavigationService&lt;Northwind.Data.Entity.Customers&gt; findNavigationService) : base(findNavigationService, e =&gt; e.CompanyName)
+      {
+
+      }
+
+      public override Expression&lt;Func&lt;Northwind.Data.Entity.Customers, bool&gt;&gt; GetSearchExpression()
+      {
+          return e =&gt; e.CompanyName.Contains(this.SearchText);
+      }
+  }
+</code></pre>
+<h2 id="example-2---quickfind-on-multiple-fields">Example 2 - QuickFind on multiple fields</h2>
+<p>The second example shows how to create a QuickFind that searches on multiple fields of the <code>Employees</code> entity.</p>
+<p>In the designer:</p>
+<p>Select &quot;User Interface&quot;</p>
+<p>Select &quot;Employees&quot;</p>
+<p>Select the &quot;LastName&quot; field</p>
+<p>In &quot;Code Tasks&quot; select &quot;QuickFind&quot; and click &quot;Add Code&quot;. A QuickFindLastName.cs file is now generated, which can be freely adapted as shown below.</p>
+<pre><code class="lang-csharp">    public class QuickFindNames : QuickFindSearchItemViewModel&lt;Northwind.Data.Entity.Employees&gt;, ISearchItemViewModel
+    {
+        public QuickFindNames(IQuickFindNavigationService&lt;Northwind.Data.Entity.Employees&gt; findNavigationService) : 
+            base(findNavigationService, e =&gt; e.LastName)
+        {
+            this.Title = &quot;Names&quot;;
+        }
+
+        public override Expression&lt;Func&lt;Northwind.Data.Entity.Employees, bool&gt;&gt; GetSearchExpression()
+        {
+            return e =&gt;
+            e.LastName.Contains(this.SearchText) ||
+            e.FirstName.Contains(this.SearchText);
+        }
+    }
+</code></pre>
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Innova Developer Platform
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
